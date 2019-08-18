@@ -10,3 +10,9 @@ a {
 nav > a.active {
   color: white;
 }
+
+form {
+  display: grid;
+  grid-gap: 1vmin;
+  width: 60vmin;
+}
