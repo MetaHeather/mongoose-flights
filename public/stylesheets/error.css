@@ -1,0 +1,28 @@
+
+body {
+    display: flex;
+    background-image: url("https://images.unsplash.com/photo-1446292532430-3e76f6ab6444?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2004&q=80;");
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+h1 {
+    font-size: 10vmin;
+    padding-left: 5vmin;
+}
+
+div {
+    margin: 0 auto;
+    padding-top: 20vmin;
+    font-size: 6vmin;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
