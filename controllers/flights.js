@@ -34,7 +34,6 @@ function newView(req, res) {
   //function for showing details page
   function showView(req, res) {
     Flight.findById(req.params.id, function (err, flight) {
-      console.log('departs:', flight.departs)
       res.render('flights/show', {
         title: 'Flight Details',
         flight
