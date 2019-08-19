@@ -11,7 +11,7 @@ var destinationSchema = new Schema({
     arrival: {
         type: Date
     }
-},{
+}, {
     timestamps: true
 });
 
@@ -20,7 +20,7 @@ var flightSchema = new Schema({
     airline: {
         type: String,
         required: true,
-        enum: ['American','Southwest', 'United'],
+        enum: ['American', 'Southwest', 'United'],
     },
     flightNo: {
         type: Number,
@@ -30,9 +30,11 @@ var flightSchema = new Schema({
     },
     departs: {
         type: Date,
-        default: function(){
+        default: function () {
+            console.log('defaulting date')
             var oneYLater = new Date();
-            oneYLater.setFullYear(oneYLater.setFullYear() + 1);
+            oneYLater.setFullYear(oneYLater.getFullYear() + 1);
+            console.log(oneYLater.toLocaleDateString());
             return oneYLater.toLocaleDateString();
         }
     },
@@ -42,7 +44,7 @@ var flightSchema = new Schema({
         default: 'SEA'
     },
     destinations: [destinationSchema]
-},{
+}, {
     timestamps: true
 });
 
