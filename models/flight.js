@@ -43,7 +43,11 @@ var flightSchema = new Schema({
         enum: ['AUS', 'DAL', 'LAX', 'SEA'],
         default: 'SEA'
     },
-    destinations: [destinationSchema]
+    destinations: [destinationSchema],
+    tickets: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Ticket'
+    }]
 }, {
     timestamps: true
 });

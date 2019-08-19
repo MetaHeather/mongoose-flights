@@ -37,7 +37,7 @@
         <% flight.destinations.forEach(function(f) { %>
         <tr>
             <td><%= f.airport %></td>
-            <td><%= f.arrival.toLocaleDateString() %></td>
+            <td><%= f.arrival.toLocaleDateTimeString() %></td>
         </tr>
         <% }); %>
     </tbody>
@@ -45,7 +45,7 @@
 <% } else { %>
 <h5>No Destinations Yet</h5>
 <% } %>
-
+<a href="/tickets/<%= flight._id%>/new">Add Ticket</a>
 <%- include('../partials/footer') %>
 
 
