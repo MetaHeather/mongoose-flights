@@ -5,10 +5,9 @@ module.exports = {
 };
 
 function newTicket(req, res) {
-    Ticket.find({}, function(err, tickets) {
-        res.render('tickets/new', {
-            title: 'Add Tickets',
-            tickets
-        });
+    console.log("new ticket route");
+    res.render('tickets/new',{ 
+        title: 'Add Ticket',
+        fId: req.params.id 
     });
 };
