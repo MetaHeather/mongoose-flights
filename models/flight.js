@@ -44,10 +44,6 @@ var flightSchema = new Schema({
         default: 'SEA'
     },
     destinations: [destinationSchema],
-    tickets: [{
-        type: Schema.Types.ObjectId,
-        ref: 'Ticket'
-    }]
 }, {
     timestamps: true
 });
