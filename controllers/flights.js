@@ -25,7 +25,7 @@ function newView(req, res) {
   });
 }
 
-
+//creates a new flight
 function create(req, res) {
   for (let key in req.body) {
     if (req.body[key] === '') delete req.body[key];
